@@ -12,23 +12,21 @@
 
 <body>
     <!-- Sticky Navbar -->
-    <nav class="navbar bg-base-100 shadow sticky top-0 z-10">
+    <nav class="navbar bg-base-100 shadow sticky top-0 z-10 pb-5 bg-indigo-100">
         <div class="">
-            <div><a href="blog.html" class="btn btn-sm btn-outline btn-success">Blog</a></div>
-            <div class="flex items-center">
+            <div class="ml-10"><a href="blog.html" class="btn btn-sm btn-outline btn-success">Blog</a></div>
+            <div class="flex items-center ml-[450px] justify-center">
                 <img src="assets/logo.png" alt="Donate Bangladesh" class="mr-2">
                 <a class="btn btn-ghost normal-case text-xl">Donate Bangladesh</a>
             </div>
-            <div class="flex items-center">
+            <div class="flex items-center ml-96">
                 <img src="assets/coin.png" alt="Taka" class="mr-1">
-                <span>5500 BDT</span>
+                <span>50000 BDT</span>
             </div>
         </div>
     </nav>
-    <br>
-    <br>
 
-    <div class="btn-container-middle">
+    <div class="btn-container-middle bg-red-100 " id="btn-sticky">
         <button class="btn btn-outline my-btn" id="btn-donation">Donation</button>
         <button class="btn btn-outline my-btn" id="btn-history">History</button>
     </div>
@@ -40,48 +38,86 @@
             <div class="grid gap-4">
                 <!-- Donation Card 1 -->
                 <div class="card card-compact w-full bg-base-100 shadow-xl">
-                    <figure><img src="image1.jpg" alt="Flood Relief" class="w-full"></figure>
-                    <div class="card-body">
+                    <div class="flex">
+                      <figure class="w-1/2 h-auto">
+                        <img src="assets/feni.png" alt="Flood Relief">
+                      </figure>
+                      <div class="card-body w-1/2">
+                        <div class="flex justify-between items-center">
+                          <div class="flex items-center">
+                            <span class="text-primary mr-2">
+                              <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 9V7a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v2m6 10V7a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v10m6-10V7a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v10" />
+                              </svg>
+                            </span>
+                            <span id="current-donation">2000 BDT</span>
+                          </div>
+                        </div>
                         <h2 class="card-title">Donate for Flood Relief in Munshiganj</h2>
                         <p>Help people affected by the severe flood in Munshiganj, Bangladesh.</p>
-                        <div class="flex justify-between items-center">
-                            <span>Current Donation: 2000 BDT</span>
-                            <input type="number" id="donate-amount-1" placeholder="Amount"
-                                class="input input-bordered w-24">
-                            <button class="btn btn-primary" data-card="1">Donate Now</button>
+                        <p class="text-sm text-gray-600 overflow-hidden">Your generous donation can provide food, shelter, and emergency supplies to those who have lost everything. Every little bit counts in rebuilding lives and restoring hope. Let’s stand together and make a difference.</p>
+                        <div class="flex flex-col items-center">
+                          <input type="number" id="donate-amount-1" placeholder="Amount" class="input input-bordered w-full mr-2">
+                          <button class="btn btn-primary w-full">Donate Now</button>
                         </div>
+                      </div>
                     </div>
-                </div>
-
-                <!-- Donation Card 2 -->
-                <div class="card card-compact w-full bg-base-100 shadow-xl">
-                    <figure><img src="image2.jpg" alt="Flood Relief" class="w-full"></figure>
-                    <div class="card-body">
+                  </div>
+                  
+                  <div class="card card-compact w-full bg-base-100 shadow-xl">
+                    <div class="flex">
+                      <figure class="w-1/2 h-auto">
+                        <img src="assets/noakhali.png" alt="Flood Relief">
+                      </figure>
+                      <div class="card-body w-1/2">
+                        <div class="flex justify-between items-center">
+                          <div class="flex items-center">
+                            <span class="text-primary mr-2">
+                              <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 9V7a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v2m6 10V7a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v10m6-10V7a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v10" />
+                              </svg>
+                            </span>
+                            <span id="current-donation-2">3000 BDT</span>
+                          </div>
+                        </div>
                         <h2 class="card-title">Donate for Flood Relief in Feni</h2>
                         <p>Help flood victims in Feni, Bangladesh.</p>
-                        <div class="flex justify-between items-center">
-                            <span>Current Donation: 3000 BDT</span>
-                            <input type="number" id="donate-amount-2" placeholder="Amount"
-                                class="input input-bordered w-24">
-                            <button class="btn btn-primary" data-card="2">Donate Now</button>
+                        <p class="text-sm text-gray-600 overflow-hidden">Your contribution will bring emergency relief to those suffering in Feni. Join us in making a tangible difference today!</p>
+                        <div class="flex flex-col items-center">
+                          <input type="number" id="donate-amount-2" placeholder="Amount" class="input input-bordered w-full mr-2">
+                          <button class="btn btn-primary w-full">Donate Now</button>
                         </div>
+                      </div>
                     </div>
-                </div>
-
-                <!-- Donation Card 3 -->
-                <div class="card card-compact w-full bg-base-100 shadow-xl">
-                    <figure><img src="image3.jpg" alt="Aid for Injured" class="w-full"></figure>
-                    <div class="card-body">
+                  </div>
+                  
+                  <div class="card card-compact w-full bg-base-100 shadow-xl">
+                    <div class="flex">
+                      <figure class="w-1/2 h-auto">
+                        <img src="assets/quota-protest.png" alt="Aid for Injured">
+                      </figure>
+                      <div class="card-body w-1/2">
+                        <div class="flex justify-between items-center">
+                          <div class="flex items-center">
+                            <span class="text-primary mr-2">
+                              <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 9V7a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v2m6 10V7a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v10m6-10V7a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v10" />
+                              </svg>
+                            </span>
+                            <span id="current-donation-3">1500 BDT</span>
+                          </div>
+                        </div>
                         <h2 class="card-title">Aid for Injured in the Gaeta Movement</h2>
-                        <p>Support the people injured in Gaeta Movement protests.</p>
-                        <div class="flex justify-between items-center">
-                            <span>Current Donation: 1500 BDT</span>
-                            <input type="number" id="donate-amount-3" placeholder="Amount"
-                                class="input input-bordered w-24">
-                            <button class="btn btn-primary" data-card="3">Donate Now</button>
+                        <p>Provide critical medical aid to those injured during the Gaeta protest movement.</p>
+                        <p class="text-sm text-gray-600 overflow-hidden">Your support will bring medical assistance and recovery services to individuals injured during the movement. Stand with us in supporting their healing journey.</p>
+                        <div class="flex flex-col items-center">
+                          <input type="number" id="donate-amount-3" placeholder="Amount" class="input input-bordered w-full mr-2">
+                          <button class="btn btn-primary w-full">Donate Now</button>
                         </div>
+                      </div>
                     </div>
-                </div>
+                  </div>
+                  
             </div>
         </div>
 

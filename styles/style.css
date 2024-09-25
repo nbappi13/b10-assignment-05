@@ -1,0 +1,21 @@
+.sticky {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+  }
+  
+  .hidden {
+    display: none;
+  }
+
+  
+  .btn-container-middle {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+  }
+
+  .my-btn:hover {
+    background-color: rgb(67, 70, 65); 
+    color: white; 
+}

@@ -1,148 +1,87 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Donate Bangladesh</title>
-    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="styles/style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Donation App</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <script defer src="app.js"></script>
 </head>
+<body class="bg-gray-100">
 
-<body>
-    <!-- Sticky Navbar -->
-    <nav class="navbar bg-base-100 shadow sticky top-0 z-10 pb-5 bg-indigo-100">
-        <div class="">
-            <div class="ml-10">
-                <a href="blog.html" id="btn-blog" class="btn btn-sm btn-outline btn-success">Blog</a>
-                <a href="index.html" id="btn-home" class="btn btn-sm btn-outline btn-success hidden">Home</a>
-            </div>
-            <div class="flex items-center ml-[450px] justify-center">
-                <img src="assets/logo.png" alt="Donate Bangladesh" class="mr-2">
-                <a class="btn btn-ghost normal-case text-xl">Donate Bangladesh</a>
-            </div>
-            <div class="flex items-center ml-96">
-                <img src="assets/coin.png" alt="Taka" class="mr-1">
-                <span id="account-balance">50000 BDT</span>
-            </div>
-        </div>
-    </nav>
+  <!-- Navbar -->
+  <nav class="bg-blue-500 p-4">
+    <div class="container mx-auto flex justify-between items-center">
+      <h1 class="text-white text-xl font-bold">Donation App</h1>
+      <div class="text-white">
+        Balance: <span id="account-balance">5000.00</span> BDT
+      </div>
+    </div>
+  </nav>
 
-    <!-- Sticky Donation & History Buttons -->
-    <div class="btn-container-middle bg-red-100" id="btn-sticky">
-        <button class="btn btn-outline my-btn" id="btn-donation">Donation</button>
-        <button class="btn btn-outline my-btn" id="btn-history">History</button>
+  <!-- Main Content -->
+  <div class="container mx-auto mt-8">
+    <div class="flex justify-center space-x-4 mb-6">
+      <button id="btn-donation" class="btn btn-primary">Donation</button>
+      <button id="btn-history" class="btn">History</button>
     </div>
 
     <!-- Donation Section -->
-    <main class="p-8">
-        <div id="donation-section">
-            <div class="grid gap-4">
-                <!-- Donation Card 1 -->
-                <div class="card card-compact w-full bg-base-100 shadow-xl bg-indigo-50 py-5">
-                    <div class="flex">
-                        <figure class="w-1/2 h-auto">
-                            <img src="assets/feni.png" alt="Flood Relief">
-                        </figure>
-                        <div class="card-body w-1/2">
-                            <div class="flex justify-between items-center">
-                                <div class="flex items-center bg-emerald-300 p-1 rounded-md">
-                                    <span class="text-primary mr-2">
-                                        <img src="assets/coin.png" alt="coin">
-                                    </span>
-                                    <span id="current-donation-1">2000 BDT</span>
-                                </div>
-                            </div>
-                            <h2 class="card-title">Donate for Flood Relief in Feni</h2>
-                            <p>Help people affected by the severe flood in Feni, Bangladesh.</p>
-                            <p class="text-sm text-gray-600 overflow-hidden">Your generous donation can provide food, shelter, and emergency supplies to those who have lost everything. Every little bit counts in rebuilding lives and restoring hope. Let’s stand together and make a difference.</p>
-                            <div class="flex flex-col items-center">
-                                <input type="number" id="donate-amount-1" placeholder="Write Donation Amount" class="input input-bordered w-full mr-2">
-                                <br>
-                                <button class="btn btn-primary w-full donate-btn" data-card="1">Donate Now</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Donation Card 2 -->
-                <div class="card card-compact w-full bg-base-100 shadow-xl bg-slate-50 py-5">
-                    <div class="flex">
-                        <figure class="w-1/2 h-auto">
-                            <img src="assets/noakhali.png" alt="Flood Relief">
-                        </figure>
-                        <div class="card-body w-1/2">
-                            <div class="flex justify-between items-center">
-                                <div class="flex items-center bg-emerald-300 p-1 rounded-md">
-                                    <span class="text-primary mr-2">
-                                        <img src="assets/coin.png" alt="coin">
-                                    </span>
-                                    <span id="current-donation-2">3000 BDT</span>
-                                </div>
-                            </div>
-                            <h2 class="card-title">Donate for Flood Relief in Noakhali</h2>
-                            <p>Help flood victims in Noakhali, Bangladesh.</p>
-                            <p class="text-sm text-gray-600 overflow-hidden">Your contribution will bring emergency relief to those suffering in Noakhali. Join us in making a tangible difference today!</p>
-                            <div class="flex flex-col items-center">
-                                <input type="number" id="donate-amount-2" placeholder="Write Donation Amount" class="input input-bordered w-full mr-2">
-                                <br>
-                                <button class="btn btn-primary w-full donate-btn" data-card="2">Donate Now</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Donation Card 3 -->
-                <div class="card card-compact w-full bg-base-100 shadow-xl bg-lime-50 py-5">
-                    <div class="flex">
-                        <figure class="w-1/2 h-auto">
-                            <img src="assets/quota-protest.png" alt="Aid for Injured">
-                        </figure>
-                        <div class="card-body w-1/2">
-                            <div class="flex justify-between items-center">
-                                <div class="flex items-center bg-emerald-300 p-1 rounded-md">
-                                    <span class="text-primary mr-2">
-                                        <img src="assets/coin.png" alt="coin">
-                                    </span>
-                                    <span id="current-donation-3">1500 BDT</span>
-                                </div>
-                            </div>
-                            <h2 class="card-title">Aid for Injured in the Quota Reform Movement</h2>
-                            <p>Provide critical medical aid to those injured during the quota reform movement in 2024 in Bangladesh.</p>
-                            <p class="text-sm text-gray-600 overflow-hidden">Your support will bring medical assistance and recovery services to individuals injured during the movement. Stand with us in supporting their healing journey.</p>
-                            <div class="flex flex-col items-center">
-                                <input type="number" id="donate-amount-3" placeholder="Write Donation Amount" class="input input-bordered w-full mr-2">
-                                <br>
-                                <button class="btn btn-primary w-full donate-btn" data-card="3">Donate Now</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+    <div id="donation-section">
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+        <!-- Card 1 -->
+        <div class="card bg-white shadow-md p-4">
+          <div class="card-body">
+            <h2 class="card-title font-bold text-lg">Help for Education</h2>
+            <p class="text-gray-600">Support children in need of education.</p>
+            <input type="number" id="donate-amount-1" class="input input-bordered w-full my-2" placeholder="Enter amount">
+            <button data-card="1" class="btn btn-primary">Donate</button>
+            <p class="mt-4">Current Donation: <span id="current-donation-1">0.00</span> BDT</p>
+          </div>
         </div>
-
-        <!-- History Section (Initially Hidden) -->
-        <div id="history-section" class="hidden">
-            <h2 class="text-2xl font-bold mb-4">Transaction History</h2>
-            <ul id="history-list" class="list-disc list-inside space-y-2">
-                <!-- History records will be injected here -->
-            </ul>
+        <!-- Card 2 -->
+        <div class="card bg-white shadow-md p-4">
+          <div class="card-body">
+            <h2 class="card-title font-bold text-lg">Food for Everyone</h2>
+            <p class="text-gray-600">Help provide meals to families in need.</p>
+            <input type="number" id="donate-amount-2" class="input input-bordered w-full my-2" placeholder="Enter amount">
+            <button data-card="2" class="btn btn-primary">Donate</button>
+            <p class="mt-4">Current Donation: <span id="current-donation-2">0.00</span> BDT</p>
+          </div>
         </div>
-    </main>
-
-    <!-- Modal (For Successful Donation) -->
-    <div id="success-modal" class="modal hidden">
-        <div class="modal-box">
-            <h3 class="font-bold text-lg">Congrats!</h3>
-            <p class="py-4">You have donated successfully for humankind.</p>
-            <div class="modal-action">
-                <button id="modal-close" class="btn">Close</button>
-            </div>
+        <!-- Card 3 -->
+        <div class="card bg-white shadow-md p-4">
+          <div class="card-body">
+            <h2 class="card-title font-bold text-lg">Support for Shelter</h2>
+            <p class="text-gray-600">Donate to build homes for the homeless.</p>
+            <input type="number" id="donate-amount-3" class="input input-bordered w-full my-2" placeholder="Enter amount">
+            <button data-card="3" class="btn btn-primary">Donate</button>
+            <p class="mt-4">Current Donation: <span id="current-donation-3">0.00</span> BDT</p>
+          </div>
         </div>
+      </div>
     </div>
 
-    <script src="js/app.js"></script>
-</body>
+    <!-- History Section (Initially Hidden) -->
+    <div id="history-section" class="hidden">
+      <h2 class="text-2xl font-bold mb-4">Transaction History</h2>
+      <ul id="history-list" class="list-disc list-inside space-y-2">
+        <!-- History records will be injected here -->
+      </ul>
+    </div>
 
+  </div>
+
+  <!-- Modal (For Successful Donation) -->
+  <div id="success-modal" class="modal hidden fixed inset-0 bg-gray-900 bg-opacity-50 flex items-center justify-center">
+    <div class="modal-box bg-white p-6 rounded shadow-lg">
+      <h3 class="font-bold text-lg">Congrats!</h3>
+      <p class="py-4">You have donated successfully for humankind.</p>
+      <div class="modal-action flex justify-end">
+        <button id="modal-close" class="btn btn-primary">Close</button>
+      </div>
+    </div>
+  </div>
+
+</body>
 </html>

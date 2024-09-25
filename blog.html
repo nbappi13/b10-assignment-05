@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog</title>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body>
+    <div class="container mx-auto p-4">
+        <!-- Home Button -->
+        <a href="index.html" class="btn btn-outline btn-primary mb-6" id="home-btn">Home</a>
+
+        <h1 class="text-4xl font-bold mb-6">Blog</h1>
+
+        <div class="collapse collapse-arrow bg-base-200 mb-4">
+            <input type="radio" name="my-accordion-2" checked="checked" />
+            <div class="collapse-title text-xl font-medium">What is the Document Object Model (DOM)?</div>
+            <div class="collapse-content">
+                <p>The DOM is a programming interface for web documents. It represents the page so that programs can
+                    change the document structure, style, and content.</p>
+            </div>
+        </div>
+
+        <div class="collapse collapse-arrow bg-base-200 mb-4">
+            <input type="radio" name="my-accordion-2" />
+            <div class="collapse-title text-xl font-medium">How do you select an element from the DOM?</div>
+            <div class="collapse-content">
+                <p>You can use methods like `document.getElementById()` or `document.querySelector()` to select elements
+                    from the DOM.</p>
+            </div>
+        </div>
+
+        <div class="collapse collapse-arrow bg-base-200 mb-4">
+            <input type="radio" name="my-accordion-2" />
+            <div class="collapse-title text-xl font-medium">What is event delegation, and why is it useful?</div>
+            <div class="collapse-content">
+                <p>Event delegation is a technique that allows you to handle events at a higher level in the DOM
+                    structure rather than directly attaching listeners to individual elements.</p>
+            </div>
+        </div>
+
+        <div class="collapse collapse-arrow bg-base-200 mb-4">
+            <input type="radio" name="my-accordion-2" />
+            <div class="collapse-title text-xl font-medium">How do you manipulate an element's attributes and styles
+                using the DOM?</div>
+            <div class="collapse-content">
+                <p>You can use the `setAttribute` method to change attributes and modify the `style` property to change
+                    the inline styles of an element. For example: `element.setAttribute('src', 'new-image.jpg')` or
+                    `element.style.backgroundColor = 'blue'`.</p>
+            </div>
+        </div>
+
+    </div>
+
+    <script>
+        // Hide the 'Home' button on the homepage and the 'Blog' button on the blog page
+        window.onload = function () {
+            const currentPage = window.location.pathname;
+            const homeBtn = document.getElementById('home-btn');
+            
+            if (currentPage.includes('blog.html')) {
+                homeBtn.classList.remove('hidden'); // Show 'Home' button on blog page
+            }
+        };
+    </script>
+</body>
+
+</html>

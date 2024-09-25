@@ -14,23 +14,26 @@
     <!-- Sticky Navbar -->
     <nav class="navbar bg-base-100 shadow sticky top-0 z-10 pb-5 bg-indigo-100">
         <div class="">
-            <div class="ml-10"><a href="blog.html" class="btn btn-sm btn-outline btn-success">Blog</a></div>
+            <div class="ml-10">
+                <a href="blog.html" id="btn-blog" class="btn btn-sm btn-outline btn-success">Blog</a>
+                <a href="index.html" id="btn-home" class="btn btn-sm btn-outline btn-success hidden">Home</a>
+            </div>
             <div class="flex items-center ml-[450px] justify-center">
                 <img src="assets/logo.png" alt="Donate Bangladesh" class="mr-2">
                 <a class="btn btn-ghost normal-case text-xl">Donate Bangladesh</a>
             </div>
             <div class="flex items-center ml-96">
                 <img src="assets/coin.png" alt="Taka" class="mr-1">
-                <span>50000 BDT</span>
+                <span id="account-balance">50000 BDT</span>
             </div>
         </div>
     </nav>
 
-    <div class="btn-container-middle bg-red-100 " id="btn-sticky">
+    <!-- Sticky Donation & History Buttons -->
+    <div class="btn-container-middle bg-red-100" id="btn-sticky">
         <button class="btn btn-outline my-btn" id="btn-donation">Donation</button>
         <button class="btn btn-outline my-btn" id="btn-history">History</button>
     </div>
-
 
     <!-- Donation Section -->
     <main class="p-8">
@@ -39,82 +42,83 @@
                 <!-- Donation Card 1 -->
                 <div class="card card-compact w-full bg-base-100 shadow-xl bg-indigo-50 py-5">
                     <div class="flex">
-                      <figure class="w-1/2 h-auto">
-                        <img src="assets/feni.png" alt="Flood Relief">
-                      </figure>
-                      <div class="card-body w-1/2">
-                        <div class="flex justify-between items-center">
-                          <div class="flex items-center bg-emerald-300 p-1 rounded-md">
-                            <span class="text-primary mr-2">
-                              <img src="assets/coin.png" alt="coin">
-                            </span>
-                            <span id="current-donation">2000 BDT</span>
-                          </div>
+                        <figure class="w-1/2 h-auto">
+                            <img src="assets/feni.png" alt="Flood Relief">
+                        </figure>
+                        <div class="card-body w-1/2">
+                            <div class="flex justify-between items-center">
+                                <div class="flex items-center bg-emerald-300 p-1 rounded-md">
+                                    <span class="text-primary mr-2">
+                                        <img src="assets/coin.png" alt="coin">
+                                    </span>
+                                    <span id="current-donation-1">2000 BDT</span>
+                                </div>
+                            </div>
+                            <h2 class="card-title">Donate for Flood Relief in Feni</h2>
+                            <p>Help people affected by the severe flood in Feni, Bangladesh.</p>
+                            <p class="text-sm text-gray-600 overflow-hidden">Your generous donation can provide food, shelter, and emergency supplies to those who have lost everything. Every little bit counts in rebuilding lives and restoring hope. Let’s stand together and make a difference.</p>
+                            <div class="flex flex-col items-center">
+                                <input type="number" id="donate-amount-1" placeholder="Write Donation Amount" class="input input-bordered w-full mr-2">
+                                <br>
+                                <button class="btn btn-primary w-full donate-btn" data-card="1">Donate Now</button>
+                            </div>
                         </div>
-                        <h2 class="card-title">Donate for Flood Relief in Feni</h2>
-                        <p>Help people affected by the severe flood in Feni, Bangladesh.</p>
-                        <p class="text-sm text-gray-600 overflow-hidden">Your generous donation can provide food, shelter, and emergency supplies to those who have lost everything. Every little bit counts in rebuilding lives and restoring hope. Let’s stand together and make a difference.</p>
-                        <div class="flex flex-col items-center">
-                          <input type="number" id="donate-amount-1" placeholder="Write Donation Amount" class="input input-bordered w-full mr-2">
-                          <br>
-                          <button class="btn btn-primary w-full">Donate Now</button>
-                        </div>
-                      </div>
                     </div>
-                  </div>
-                  
-                  <div class="card card-compact w-full bg-base-100 shadow-xl bg-slate-50 py-5">
+                </div>
+
+                <!-- Donation Card 2 -->
+                <div class="card card-compact w-full bg-base-100 shadow-xl bg-slate-50 py-5">
                     <div class="flex">
-                      <figure class="w-1/2 h-auto">
-                        <img src="assets/noakhali.png" alt="Flood Relief">
-                      </figure>
-                      <div class="card-body w-1/2">
-                        <div class="flex justify-between items-center">
-                          <div class="flex items-center bg-emerald-300 p-1 rounded-md">
-                            <span class="text-primary mr-2">
-                                <img src="assets/coin.png" alt="coin">
-                            </span>
-                            <span id="current-donation-2">3000 BDT</span>
-                          </div>
+                        <figure class="w-1/2 h-auto">
+                            <img src="assets/noakhali.png" alt="Flood Relief">
+                        </figure>
+                        <div class="card-body w-1/2">
+                            <div class="flex justify-between items-center">
+                                <div class="flex items-center bg-emerald-300 p-1 rounded-md">
+                                    <span class="text-primary mr-2">
+                                        <img src="assets/coin.png" alt="coin">
+                                    </span>
+                                    <span id="current-donation-2">3000 BDT</span>
+                                </div>
+                            </div>
+                            <h2 class="card-title">Donate for Flood Relief in Noakhali</h2>
+                            <p>Help flood victims in Noakhali, Bangladesh.</p>
+                            <p class="text-sm text-gray-600 overflow-hidden">Your contribution will bring emergency relief to those suffering in Noakhali. Join us in making a tangible difference today!</p>
+                            <div class="flex flex-col items-center">
+                                <input type="number" id="donate-amount-2" placeholder="Write Donation Amount" class="input input-bordered w-full mr-2">
+                                <br>
+                                <button class="btn btn-primary w-full donate-btn" data-card="2">Donate Now</button>
+                            </div>
                         </div>
-                        <h2 class="card-title">Donate for Flood Relief in NoaKhali</h2>
-                        <p>Help flood victims in NoaKhali, Bangladesh.</p>
-                        <p class="text-sm text-gray-600 overflow-hidden">Your contribution will bring emergency relief to those suffering in NoaKhali. Join us in making a tangible difference today!</p>
-                        <div class="flex flex-col items-center">
-                          <input type="number" id="donate-amount-2" placeholder="Write Donation Amount" class="input input-bordered w-full mr-2">
-                          <br>
-                          <button class="btn btn-primary w-full">Donate Now</button>
-                        </div>
-                      </div>
                     </div>
-                  </div>
-                  
-                  <div class="card card-compact w-full bg-base-100 shadow-xl bg-lime-50 py-5">
+                </div>
+
+                <!-- Donation Card 3 -->
+                <div class="card card-compact w-full bg-base-100 shadow-xl bg-lime-50 py-5">
                     <div class="flex">
-                      <figure class="w-1/2 h-auto">
-                        <img src="assets/quota-protest.png" alt="Aid for Injured">
-                      </figure>
-                      <div class="card-body w-1/2">
-                        <div class="flex justify-between items-center">
-                          <div class="flex items-center bg-emerald-300 p-1 rounded-md">
-                            <span class="text-primary mr-2">
-                                <img src="assets/coin.png" alt="coin">
-                            </span>
-                            <span id="current-donation-3">1500 BDT</span>
-                          </div>
+                        <figure class="w-1/2 h-auto">
+                            <img src="assets/quota-protest.png" alt="Aid for Injured">
+                        </figure>
+                        <div class="card-body w-1/2">
+                            <div class="flex justify-between items-center">
+                                <div class="flex items-center bg-emerald-300 p-1 rounded-md">
+                                    <span class="text-primary mr-2">
+                                        <img src="assets/coin.png" alt="coin">
+                                    </span>
+                                    <span id="current-donation-3">1500 BDT</span>
+                                </div>
+                            </div>
+                            <h2 class="card-title">Aid for Injured in the Quota Reform Movement</h2>
+                            <p>Provide critical medical aid to those injured during the quota reform movement in 2024 in Bangladesh.</p>
+                            <p class="text-sm text-gray-600 overflow-hidden">Your support will bring medical assistance and recovery services to individuals injured during the movement. Stand with us in supporting their healing journey.</p>
+                            <div class="flex flex-col items-center">
+                                <input type="number" id="donate-amount-3" placeholder="Write Donation Amount" class="input input-bordered w-full mr-2">
+                                <br>
+                                <button class="btn btn-primary w-full donate-btn" data-card="3">Donate Now</button>
+                            </div>
                         </div>
-                        <h2 class="card-title">Aid for Injured in the Quota reform movement</h2>
-                        <p>Provide critical medical aid to those injured during the quota reform movement in 2024 in Bangladesh.</p>
-                        <p class="text-sm text-gray-600 overflow-hidden">Your support will bring medical assistance and recovery services to individuals injured during the movement. Stand with us in supporting their healing journey.</p>
-                        <div class="flex flex-col items-center">
-                          <input type="number" id="donate-amount-3" placeholder="Write Donation Amount" class="input input-bordered w-full mr-2">
-                          <br>
-                          <button class="btn btn-primary w-full">Donate Now</button>
-                        </div>
-                      </div>
                     </div>
-                  </div>
-                  
+                </div>
             </div>
         </div>
 

@@ -13,16 +13,16 @@
 <body>
     <!-- Sticky Navbar -->
     <nav class="navbar bg-base-100 shadow sticky top-0 z-10 pb-5 bg-indigo-100">
-        <div class="">
-            <div class="ml-10">
+        <div class="container mx-auto flex flex-col lg:flex-row justify-between items-center px-4 lg:px-10">
+            <div class="flex justify-between items-center w-full lg:w-auto">
                 <a href="blog.html" id="btn-blog" class="btn btn-sm btn-outline btn-success bg-white">Blog</a>
                 <a href="index.html" id="btn-home" class="btn btn-sm btn-outline btn-success hidden">Home</a>
             </div>
-            <div class="flex items-center ml-[450px] justify-center">
+            <div class="flex items-center justify-center my-3 lg:my-0">
                 <img src="assets/logo.png" alt="Donate Bangladesh" class="mr-2">
                 <a class="btn btn-ghost normal-case text-xl">Donate Bangladesh</a>
             </div>
-            <div class="flex items-center ml-96">
+            <div class="flex items-center w-full lg:w-auto justify-center lg:justify-end">
                 <img src="assets/coin.png" alt="Taka" class="mr-1">
                 <span id="account-balance">50000 BDT</span>
             </div>
@@ -41,11 +41,11 @@
             <div class="grid gap-4">
                 <!-- Donation Card 1 -->
                 <div class="card card-compact w-full bg-base-100 shadow-xl bg-indigo-50 py-5">
-                    <div class="flex">
-                        <figure class="w-1/2 h-auto">
-                            <img src="assets/feni.png" alt="Flood Relief">
+                    <div class="flex flex-col lg:flex-row">
+                        <figure class="lg:w-1/2 h-auto">
+                            <img src="assets/feni.png" alt="Flood Relief" class="object-cover w-full">
                         </figure>
-                        <div class="card-body w-1/2">
+                        <div class="card-body lg:w-1/2">
                             <div class="flex justify-between items-center">
                                 <div class="flex items-center bg-emerald-300 p-1 rounded-md">
                                     <span class="text-primary mr-2">
@@ -56,7 +56,7 @@
                             </div>
                             <h2 class="card-title">Donate for Flood Relief in Feni</h2>
                             <p>Help people affected by the severe flood in Feni, Bangladesh.</p>
-                            <p class="text-sm text-gray-600 overflow-hidden">Your generous donation can provide food, shelter, and emergency supplies to those who have lost everything. Every little bit counts in rebuilding lives and restoring hope. Let’s stand together and make a difference.</p>
+                            <p class="text-sm text-gray-600 overflow-hidden">Your generous donation can provide food, shelter, and emergency supplies to those who have lost everything. Every little bit counts in rebuilding lives and restoring hope.</p>
                             <div class="flex flex-col items-center">
                                 <input type="number" id="donate-amount-1" placeholder="Write Donation Amount" class="input input-bordered w-full mr-2">
                                 <br>
@@ -68,11 +68,11 @@
 
                 <!-- Donation Card 2 -->
                 <div class="card card-compact w-full bg-base-100 shadow-xl bg-slate-50 py-5">
-                    <div class="flex">
-                        <figure class="w-1/2 h-auto">
-                            <img src="assets/noakhali.png" alt="Flood Relief">
+                    <div class="flex flex-col lg:flex-row">
+                        <figure class="lg:w-1/2 h-auto">
+                            <img src="assets/noakhali.png" alt="Flood Relief" class="object-cover w-full">
                         </figure>
-                        <div class="card-body w-1/2">
+                        <div class="card-body lg:w-1/2">
                             <div class="flex justify-between items-center">
                                 <div class="flex items-center bg-emerald-300 p-1 rounded-md">
                                     <span class="text-primary mr-2">
@@ -95,11 +95,11 @@
 
                 <!-- Donation Card 3 -->
                 <div class="card card-compact w-full bg-base-100 shadow-xl bg-lime-50 py-5">
-                    <div class="flex">
-                        <figure class="w-1/2 h-auto">
-                            <img src="assets/quota-protest.png" alt="Aid for Injured">
+                    <div class="flex flex-col lg:flex-row">
+                        <figure class="lg:w-1/2 h-auto">
+                            <img src="assets/quota-protest.png" alt="Aid for Injured" class="object-cover w-full">
                         </figure>
-                        <div class="card-body w-1/2">
+                        <div class="card-body lg:w-1/2">
                             <div class="flex justify-between items-center">
                                 <div class="flex items-center bg-emerald-300 p-1 rounded-md">
                                     <span class="text-primary mr-2">
@@ -110,7 +110,7 @@
                             </div>
                             <h2 class="card-title">Aid for Injured in the Quota Reform Movement</h2>
                             <p>Provide critical medical aid to those injured during the quota reform movement in 2024 in Bangladesh.</p>
-                            <p class="text-sm text-gray-600 overflow-hidden">Your support will bring medical assistance and recovery services to individuals injured during the movement. Stand with us in supporting their healing journey.</p>
+                            <p class="text-sm text-gray-600 overflow-hidden">Your support will bring medical assistance and recovery services to individuals injured during the movement.</p>
                             <div class="flex flex-col items-center">
                                 <input type="number" id="donate-amount-3" placeholder="Write Donation Amount" class="input input-bordered w-full mr-2">
                                 <br>
@@ -132,23 +132,21 @@
     </main>
 
     <!-- Modal (For Successful Donation) -->
-    <!-- Modal (For Successful Donation) -->
-<input type="checkbox" id="success-modal" class="modal-toggle" />
-<div class="modal">
-    <div class="modal-box">
-        
-        <h3 class="font-bold text-lg">Congrats!</h3>
+    <input type="checkbox" id="success-modal" class="modal-toggle" />
+    <div class="modal">
+        <div class="modal-box">
+            <h3 class="font-bold text-lg">Congrats!</h3>
             <img class="mx-auto" src="assets/coin.png" alt="coin">
-        <br>
-        <p class="py-4">You have donated for Humankind <br>
-            <span class="font-extrabold">Successfully</span></p>
-        <div class="modal-action">
-            <label for="success-modal" class="btn">Close</label>
+            <br>
+            <p class="py-4">You have donated for Humankind <br>
+                <span class="font-extrabold">Successfully</span></p>
+            <div class="modal-action">
+                <label for="success-modal" class="btn">Close</label>
+            </div>
         </div>
     </div>
-</div>
-
 
     <script src="js/app.js"></script>
 </body>
+
 </html>

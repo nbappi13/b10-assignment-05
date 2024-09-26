@@ -70,3 +70,27 @@ background-image: linear-gradient(to bottom, rgba(167, 211, 85, 0.95), rgba(238,
 .modal-action .btn:hover {
   background-color: #e5e7eb;
 }
+
+/* --------------------------------------------------------------------------- */
+
+/* Added responsiveness for mobile devices */
+@media (max-width: 1024px) {
+  /* Adjust navbar for mobile */
+  .navbar .container {
+      flex-direction: column;
+  }
+
+  /* Adjust donation cards for mobile */
+  .card .flex {
+      flex-direction: column;
+  }
+
+  /* Adjust buttons for mobile */
+  .btn-container-middle {
+      flex-direction: column;
+  }
+}
+
+
+
+

@@ -51,6 +51,12 @@ document.querySelectorAll('.btn-primary').forEach(button => {
     historyItem.innerText = `${currentBDTime} - Donated ${donateAmount.toFixed(2)} BDT to ${donationTitle}`;  // Create history item
     historyList.appendChild(historyItem);  // Append to history list
 
+    // Show success modal by setting the checkbox to "checked"
+    document.getElementById('success-modal').checked = true;
+
+    // Clear the donation input field after successful donation
+    donateInput.value = '';
+
     // Show success modal
     document.getElementById('success-modal').classList.remove('hidden');
   });
@@ -60,4 +66,3 @@ document.querySelectorAll('.btn-primary').forEach(button => {
 document.getElementById('modal-close').addEventListener('click', () => {
   document.getElementById('success-modal').classList.add('hidden');
 });
-

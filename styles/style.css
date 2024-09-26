@@ -89,6 +89,24 @@ background-image: linear-gradient(to bottom, rgba(167, 211, 85, 0.95), rgba(238,
   .btn-container-middle {
       flex-direction: column;
   }
+
+  .sticky {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+  }
+
+  #btn-sticky {
+    position: sticky;
+    top: 160px; 
+    z-index: 99; 
+    display: flex;
+    justify-content: center;
+    background-color: rgba(185, 233, 181, 0.9); /* Darker green with 90% opacity */
+  background-image: linear-gradient(to bottom, rgba(167, 211, 85, 0.95), rgba(238, 240, 236, 0.219));
+    background-color: ;
+    padding: 10px;
+  }
 }
 
 

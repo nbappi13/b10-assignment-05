@@ -10,9 +10,8 @@
   z-index: 99; 
   display: flex;
   justify-content: center;
-  background-color: rgba(185, 233, 181, 0.9); /* Darker green with 90% opacity */
-background-image: linear-gradient(to bottom, rgba(167, 211, 85, 0.95), rgba(238, 240, 236, 0.219));
-  background-color: ;
+  background-color: rgba(185, 233, 181, 0.9);
+  background-image: linear-gradient(to bottom, rgba(167, 211, 85, 0.95), rgba(238, 240, 236, 0.219));
   padding: 30px;
 }
 
@@ -40,8 +39,6 @@ background-image: linear-gradient(to bottom, rgba(167, 211, 85, 0.95), rgba(238,
 }
 
 
-
-/* Modal Styles */
 .modal {
   position: fixed;
   top: 0;
@@ -71,21 +68,16 @@ background-image: linear-gradient(to bottom, rgba(167, 211, 85, 0.95), rgba(238,
   background-color: #e5e7eb;
 }
 
-/* --------------------------------------------------------------------------- */
 
-/* Added responsiveness for mobile devices */
 @media (max-width: 1024px) {
-  /* Adjust navbar for mobile */
   .navbar .container {
       flex-direction: column;
   }
 
-  /* Adjust donation cards for mobile */
   .card .flex {
       flex-direction: column;
   }
 
-  /* Adjust buttons for mobile */
   .btn-container-middle {
       flex-direction: column;
   }
@@ -93,16 +85,16 @@ background-image: linear-gradient(to bottom, rgba(167, 211, 85, 0.95), rgba(238,
   .sticky {
     position: sticky;
     top: 0;
-    z-index: 100;
+    z-index: 130;
   }
 
   #btn-sticky {
     position: sticky;
-    top: 160px; 
-    z-index: 99; 
+    top: 137px; 
+    z-index: 90; 
     display: flex;
     justify-content: center;
-    background-color: rgba(185, 233, 181, 0.9); /* Darker green with 90% opacity */
+    background-color: rgba(185, 233, 181, 0.9);
   background-image: linear-gradient(to bottom, rgba(167, 211, 85, 0.95), rgba(238, 240, 236, 0.219));
     background-color: ;
     padding: 10px;

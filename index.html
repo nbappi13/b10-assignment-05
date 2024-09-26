@@ -5,13 +5,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Donate Bangladesh</title>
+    <link rel="shortcut icon" href="assets/fav-icon.svg" type="image/x-icon">
     <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="styles/style.css">
 </head>
 
 <body>
-    <!-- Sticky Navbar -->
     <nav class="navbar bg-base-100 shadow sticky top-0 z-10 pb-5 bg-indigo-100">
         <div class="container mx-auto flex flex-col lg:flex-row justify-between items-center px-4 lg:px-10">
             <div class="flex justify-between items-center w-full lg:w-auto">
@@ -20,7 +20,7 @@
             </div>
             <div class="flex items-center justify-center my-3 lg:my-0">
                 <img src="assets/logo.png" alt="Donate Bangladesh" class="mr-2">
-                <a class="btn btn-ghost normal-case text-xl">Donate Bangladesh</a>
+                <a class="btn btn-ghost normal-case text-xl">Donate for Bangladesh</a>
             </div>
             <div class="flex items-center w-full lg:w-auto justify-center lg:justify-end">
                 <img src="assets/coin.png" alt="Taka" class="mr-1">
@@ -29,17 +29,15 @@
         </div>
     </nav>
 
-    <!-- Sticky Donation & History Buttons -->
+
     <div class="btn-container-middle bg-red-100" id="btn-sticky">
         <button class="btn btn-outline my-btn" id="btn-donation">Donation</button>
         <button class="btn btn-outline my-btn" id="btn-history">History</button>
     </div>
 
-    <!-- Donation Section -->
     <main class="p-8">
         <div id="donation-section">
             <div class="grid gap-4">
-                <!-- Donation Card 1 -->
                 <div class="card card-compact w-full bg-base-100 shadow-xl bg-indigo-50 py-5">
                     <div class="flex flex-col lg:flex-row">
                         <figure class="lg:w-1/2 h-auto">
@@ -66,7 +64,6 @@
                     </div>
                 </div>
 
-                <!-- Donation Card 2 -->
                 <div class="card card-compact w-full bg-base-100 shadow-xl bg-slate-50 py-5">
                     <div class="flex flex-col lg:flex-row">
                         <figure class="lg:w-1/2 h-auto">
@@ -93,7 +90,6 @@
                     </div>
                 </div>
 
-                <!-- Donation Card 3 -->
                 <div class="card card-compact w-full bg-base-100 shadow-xl bg-lime-50 py-5">
                     <div class="flex flex-col lg:flex-row">
                         <figure class="lg:w-1/2 h-auto">
@@ -122,16 +118,15 @@
             </div>
         </div>
 
-        <!-- History Section (Initially Hidden) -->
         <div id="history-section" class="hidden">
             <h2 class="text-2xl font-bold mb-4">Transaction History</h2>
             <ul id="history-list" class="list-disc list-inside space-y-2">
-                <!-- History records will be injected here -->
+
             </ul>
         </div>
     </main>
 
-    <!-- Modal (For Successful Donation) -->
+
     <input type="checkbox" id="success-modal" class="modal-toggle" />
     <div class="modal">
         <div class="modal-box">
@@ -146,7 +141,7 @@
         </div>
     </div>
 
-    <script src="js/app.js"></script>
+    <script src="js/donate.js"></script>
 </body>
 
 </html>

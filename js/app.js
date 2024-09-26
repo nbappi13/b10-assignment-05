@@ -39,11 +39,16 @@ document.querySelectorAll('.btn-primary').forEach(button => {
     const updatedDonationAmount = currentDonationAmount + donateAmount;
     cardDonationAmountElement.innerText = updatedDonationAmount.toFixed(2) + ' BDT';  // Update card donation
 
-    // Add donation entry to history
+    // Add donation entry to history with BD time and card name
     const donationTitle = e.target.closest('.card-body').querySelector('.card-title').innerText;  // Get card title
     const historyList = document.getElementById('history-list');  // Get history list element
     const historyItem = document.createElement('li');
-    historyItem.innerText = `${new Date().toLocaleString()} - Donated ${donateAmount} BDT to ${donationTitle}`;  // Create history item
+
+    // Get the current BD time in a readable format
+    const options = { timeZone: 'Asia/Dhaka', year: 'numeric', month: 'long', day: 'numeric', hour: '2-digit', minute: '2-digit', second: '2-digit' };
+    const currentBDTime = new Date().toLocaleString('en-US', options);  // Format date and time for Bangladesh
+    
+    historyItem.innerText = `${currentBDTime} - Donated ${donateAmount.toFixed(2)} BDT to ${donationTitle}`;  // Create history item
     historyList.appendChild(historyItem);  // Append to history list
 
     // Show success modal
@@ -55,3 +60,4 @@ document.querySelectorAll('.btn-primary').forEach(button => {
 document.getElementById('modal-close').addEventListener('click', () => {
   document.getElementById('success-modal').classList.add('hidden');
 });
+

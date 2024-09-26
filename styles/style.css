@@ -103,4 +103,33 @@
 
 
 
+/* ----------------- */
+
+#history-section {
+  max-width: 800px;
+  margin: 0 auto;
+  background-color: #fff;
+}
+
+.history-item {
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 15px;
+  margin-bottom: 15px;
+}
+
+.history-item:last-child {
+  border-bottom: none;
+  margin-bottom: 0;
+}
+
+.history-item p {
+  margin: 0;
+}
+
+.history-item .date {
+  color: #777;
+}
+
+
+
 

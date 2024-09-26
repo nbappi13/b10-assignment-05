@@ -46,8 +46,9 @@ document.querySelectorAll('.btn-primary').forEach(button => {
     const options = { timeZone: 'Asia/Dhaka', year: 'numeric', month: 'long', day: 'numeric', hour: '2-digit', minute: '2-digit', second: '2-digit' };
     const currentBDTime = new Date().toLocaleString('en-US', options); 
     
-    historyItem.innerText = `${currentBDTime} - Donated ${donateAmount.toFixed(2)} BDT to ${donationTitle}`; 
-    historyList.appendChild(historyItem); 
+    historyItem.innerHTML = `<span style="font-weight: bold;">Donated ${donateAmount.toFixed(2)} BDT to ${donationTitle}</span><br>
+    <span style="font-weight: lighter;">${currentBDTime}</span>`;
+    historyList.appendChild(historyItem);
 
     document.getElementById('success-modal').checked = true;
 

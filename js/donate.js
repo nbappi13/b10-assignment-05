@@ -1,24 +1,21 @@
-
-document.getElementById('btn-donation').addEventListener('click', () => {
+document.getElementById('btn-donation').addEventListener('click', function() {
   document.getElementById('donation-section').classList.remove('hidden');
   document.getElementById('history-section').classList.add('hidden');
 });
 
-document.getElementById('btn-history').addEventListener('click', () => {
+document.getElementById('btn-history').addEventListener('click', function() {
   document.getElementById('history-section').classList.remove('hidden');
   document.getElementById('donation-section').classList.add('hidden');
 });
 
-
-document.querySelectorAll('.btn-primary').forEach(button => {
-  button.addEventListener('click', (e) => {
+document.querySelectorAll('.btn-primary').forEach(function(button) {
+  button.addEventListener('click', function(e) {
     const cardId = e.target.dataset.card; 
     const donateInput = document.getElementById(`donate-amount-${cardId}`);
     const donateAmount = parseFloat(donateInput.value); 
     const balanceElement = document.getElementById('account-balance'); 
     const balance = parseFloat(balanceElement.innerText); 
 
-  
     if (isNaN(donateAmount) || donateAmount <= 0) {
       alert('Please enter a valid donation amount.'); 
       return;
@@ -37,11 +34,9 @@ document.querySelectorAll('.btn-primary').forEach(button => {
     const updatedDonationAmount = currentDonationAmount + donateAmount;
     cardDonationAmountElement.innerText = updatedDonationAmount.toFixed(2) + ' BDT'; 
 
-
     const donationTitle = e.target.closest('.card-body').querySelector('.card-title').innerText; 
     const historyList = document.getElementById('history-list');
     const historyItem = document.createElement('li');
-
 
     const options = { timeZone: 'Asia/Dhaka', year: 'numeric', month: 'long', day: 'numeric', hour: '2-digit', minute: '2-digit', second: '2-digit' };
     const currentBDTime = new Date().toLocaleString('en-US', options); 
@@ -58,6 +53,6 @@ document.querySelectorAll('.btn-primary').forEach(button => {
   });
 });
 
-document.getElementById('modal-close').addEventListener('click', () => {
+document.getElementById('modal-close').addEventListener('click', function() {
   document.getElementById('success-modal').classList.add('hidden');
 });

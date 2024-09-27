@@ -9,8 +9,8 @@ document.getElementById('btn-history').addEventListener('click', function() {
 });
 
 document.querySelectorAll('.btn-primary').forEach(function(button) {
-  button.addEventListener('click', function(e) {
-    const cardId = e.target.dataset.card; 
+  button.addEventListener('click', function(event) {
+    const cardId = event.target.dataset.card; 
     const donateInput = document.getElementById(`donate-amount-${cardId}`);
     const donateAmount = parseFloat(donateInput.value); 
     const balanceElement = document.getElementById('account-balance'); 
@@ -34,7 +34,7 @@ document.querySelectorAll('.btn-primary').forEach(function(button) {
     const updatedDonationAmount = currentDonationAmount + donateAmount;
     cardDonationAmountElement.innerText = updatedDonationAmount.toFixed(2) + ' BDT'; 
 
-    const donationTitle = e.target.closest('.card-body').querySelector('.card-title').innerText; 
+    const donationTitle = event.target.closest('.card-body').querySelector('.card-title').innerText; 
     const historyList = document.getElementById('history-list');
     const historyItem = document.createElement('li');
 
